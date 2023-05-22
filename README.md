@@ -24,3 +24,9 @@ For instance, if the gear is in the correct position or rotated to a certain ang
 # Integration with Raspberry Pi:
 Integrate the image processing code with the Raspberry Pi and control the motor based on the decisions made in the previous step. 
 Utilize the appropriate GPIO (General Purpose Input/Output) pins of the Raspberry Pi to interface with the motor and control its movement.
+
+
+# Libraries
+pip install psutil
+- import psutil
+- temperature = psutil.sensors_temperatures()['cpu-thermal'][0].current
