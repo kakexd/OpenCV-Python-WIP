@@ -28,15 +28,15 @@ Utilize the appropriate GPIO (General Purpose Input/Output) pins of the Raspberr
 
 # Libraries
 pip install psutil
+
 import psutil
+
 import time
 
-while True:
+- this is under A True statement.
 
     temperature = psutil.sensors_temperatures()['cpu-thermal'][0].current
     
     print("CPU Temperature:", temperature)
-    
-    # Perform other tasks or logic based on the temperature reading
 
     time.sleep(5)  # Delay for 5 seconds before the next temperature measurement
