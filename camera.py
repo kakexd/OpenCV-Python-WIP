@@ -1,11 +1,27 @@
 import cv2
+# making an index to open every single camer from range 0-9
+# this will search all cameras in this case: one built-in and another is with USB
+# None the less, the index finds 2 cameras and following the code:
 
-cap = cv2.VideoCapture(0)
+for index in range(10):
 
+    # VideoCapture(index) where there is 2 cameras
+    cap = cv2.VideoCapture(index)
+
+    if cap.isOpened():
+
+        # Finds the camera
+        print(f"camera is opened")
+        break
+
+# There's no camera    
 if not cap.isOpened():
     exit(-1)
 
-# Opens camera and starts grayscale
+# Here we are using the second camera and cap = cv2.VideoCapture(index) points that 0 = built-in and 1 = USB connected
+cap = cv2.VideoCapture(1)
+
+# Camera opens with grayscale what is colored black and white
 while True:
     ret, frame = cap.read()
     
