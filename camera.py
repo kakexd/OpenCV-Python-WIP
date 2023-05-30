@@ -19,7 +19,7 @@ if not cap.isOpened():
     exit(-1)
 
 # Here we are using the second camera and cap = cv2.VideoCapture(index) points that 0 = built-in and 1 = USB connected
-cap = cv2.VideoCapture(1)
+cap = (cv2.VideoCapture(1) or cv2.VideoCapture(0))
 
 # Camera opens with grayscale what is colored black and white
 while True:
