@@ -28,12 +28,17 @@ while True:
     if not ret:
         break
     
-    edges = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    edges = cv2.GaussianBlur(edges, (7, 7), 1.5, 1.5)
-    edges = cv2.Canny(edges, 0, 30, 3)
-    
-    cv2.imshow('edges', edges)
-    
+    #edges = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    #edges = cv2.GaussianBlur(edges, (7, 7), 1.5, 1.5)
+    #edges = cv2.Canny(edges, 0, 30, 3)
+
+    colored = cv2.applyColorMap(frame, cv2.COLORMAP_JET)
+    colored = cv2.GaussianBlur(colored, (7,7), 1.5, 1.5)
+    colored = cv2.Canny(colored, 0, 30, 3)
+    # cv2.imshow('edges', edges)
+    cv2.imshow('colored', colored)
+
+
     if cv2.waitKey(30) >= 0:
         break
 
