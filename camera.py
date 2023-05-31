@@ -1,23 +1,21 @@
 import cv2
 from tqdm import tqdm
+# tqdm represents a progress bar to show camera finding progression
 
-
-# making an index to open every single camer from range 0-9
+# making an index to open every single camer from range 0-s_index
 # this will search all cameras in this case: one built-in and another is with USB
 # None the less, the index finds 2 cameras and following the code:
-
-
-start_index = 0
-end_index = 9
+s_index = 0
+e_index = 9
 
 # Creating a progress bar for identifying camera
-pbar = tqdm(total=start_index - end_index + 1)
+pbar = tqdm(total=s_index - e_index + 1)
 
 cap = None
 
 # Finding any camera available to use
 
-for index in range(start_index, end_index + 1):
+for index in range(s_index, e_index + 1):
     # VideoCapture(index) where there is 2 cameras
     cap = cv2.VideoCapture(index)
 
@@ -34,7 +32,7 @@ for index in range(start_index, end_index + 1):
 pbar.close()
 
 
-# There's no camera    
+# There's no camera available   
 if cap is None or not cap.isOpened():
     exit(-1)
 
