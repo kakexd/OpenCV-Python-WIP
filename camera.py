@@ -36,6 +36,8 @@ pbar.close()
 if cap is None or not cap.isOpened():
     exit(-1)
 
+# Loading trained detection cascade
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 # Camera opens with grayscale what is colored black and white
 while True:
     ret, frame = cap.read()
@@ -44,12 +46,21 @@ while True:
         break
     
     edges = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+    # Performing facial detection
+    faces = face_cascade.detectMultiScale(edges, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
+
+    # Drawing rectangles around the faces
+    for (x, y, w, h) in faces:
+        cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+    
     edges = cv2.GaussianBlur(edges, (7, 7), 1.5, 1.5)
     edges = cv2.Canny(edges, 0, 30, 3)
     colored_edges = cv2.applyColorMap(edges, cv2.COLORMAP_JET)
     
     cv2.imshow('edges', edges)
     cv2.imshow('colored_edges', colored_edges)
+    cv2.imshow('frame', frame)
     if cv2.waitKey(30) >= 0:
         break
     
