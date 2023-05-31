@@ -1,0 +1,16 @@
+# Face detection
+Face Detection: Use a face detection algorithm to locate and extract faces from the live feed. 
+OpenCV provides the CascadeClassifier class, which can be used with pre-trained Haar cascades or other cascade files for face detection.
+
+# Face recognition
+Face Recognition: Train a face recognition model on a dataset of known faces. 
+This typically involves collecting images of individuals you want to recognize and extracting facial features from those images. 
+OpenCV offers methods such as Local Binary Patterns Histograms (LBPH) and Eigenfaces for face recognition. Alternatively, you can use deep learning-based approaches like OpenCV DNN module with pre-trained models like OpenFace, FaceNet, or VGGFace.
+
+# Matching and recognition
+Matching and Recognition: After detecting a face in the live feed, compare it with the known faces in your dataset using the trained face recognition model. 
+Compute the similarity or distance between the detected face and the known faces and determine if there is a match. 
+A threshold can be set to decide when a match is considered successful.
+
+# Result Display
+Displaying Results: Once a match is found, you can display the recognized person's name or ID on the video feed or perform any other desired action based on the recognition result.
