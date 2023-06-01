@@ -1,5 +1,6 @@
 import cv2
 from tqdm import tqdm
+from cascadetraining import CascadeTrain
 # tqdm represents a progress bar to show camera finding progression
 
 # making an index to open every single camer from range 0-s_index
@@ -12,6 +13,19 @@ e_index = 9
 pbar = tqdm(total=s_index - e_index + 1)
 
 cap = None
+
+# Setting a path to the cascadetraining files
+
+positive_images_dir = 'C:\\Users\\kalle.lehto\\oparicv\\HumidityNtemperature\\pictures\\Positive\\'
+negative_images_dir = 'C:\\Users\\kalle.lehto\\oparicv\\HumidityNtemperature\\pictures\\Negative'
+cascade_file = 'C:\\Users\\kalle.lehto\\oparicv\\HumidityNtemperature\\xml'
+
+# Create an instance of the CascadeTrain
+trainer = CascadeTrain(positive_images_dir, negative_images_dir, cascade_file)
+
+# Train the cascade classifier
+trainer.train()
+
 
 # Finding any camera available to use
 
