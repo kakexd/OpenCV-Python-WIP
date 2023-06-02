@@ -28,6 +28,15 @@ class CascadeTrain:
         cascade.save(self.cascade_file)
 
     def load_positive_images(self):
+        with open(self.positive_images_dir, 'r', encoding='utf-8') as f:
+            lines = f.readline()
+            for line in lines:
+                line = line.strip()
+                if line:
+                    image_path, annotation_path = line.split(',')
+                    positive_images.append(image_path)
+                    annotation.append(annotation_path)
+        
         positive_images = []
         annotations = []
 
