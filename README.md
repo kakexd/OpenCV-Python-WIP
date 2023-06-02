@@ -1,10 +1,10 @@
 # Roadmap 1.0
 
 # Project tools
-OpenCV libary
-CascadeTraining model
-Annonation tools
-https://www.robots.ox.ac.uk/~vgg/software/via/
+- OpenCV libary
+- CascadeTraining model
+- Annonation tools
+- https://www.robots.ox.ac.uk/~vgg/software/via/
 
 
 # OpenCV Project
