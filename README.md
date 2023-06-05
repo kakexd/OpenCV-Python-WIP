@@ -55,6 +55,13 @@ import cv2
 import rqdm proggres bar :D
 
 # Annotations files: W.I.P
+    While using git.bash, go to the directory where pictures are located with $ ~/file/project/pictures
+    
+    Next, we want to run the following .exe file to make Positive file from taken pictures.
+    Same goes with Negative pictures.
+    
+    $ /c/Users/name_of_user/file/mainproject/opencv/build/x64/vc15/bin/opencv_annotation.exe --annotations=pos.txt --images=positive/
+    
 
 Making a set of annotation files for cascade to be trained from. C:/path/user/opencv/pictures/positive/*
 from Cascade training, needs to be correct path. So far it gives an error that the file does not exist in the directed path.
