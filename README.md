@@ -85,4 +85,7 @@ Displaying Results: Once a match is found, you can display the recognized person
     first we load a cascade model, either pre-trained or training it yourself
     - cascade = cv2.CascadeClassifier('path/to/cascade.xml')
     
+# Migration to Linux
+Could be possible but instead :,D
+
 # W.I.P
