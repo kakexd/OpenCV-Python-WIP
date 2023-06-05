@@ -14,7 +14,8 @@ pbar = tqdm(total=s_index - e_index + 1)
 
 cap = None
 
-# Setting a path to the cascadetraining files
+# Setting a path to the cascadetraining files.
+# CHANGE THE PATH BEFORE MIGRATING TO RASPBERRY PI!!!!!!!!!!!!
 
 positive_images_dir = "C:\\Users\\kalle.lehto\\oparicv\\HumidityNtemperature\\pictures\\Positive\\WIN_20230601_10_44_34_Pro.txt"
 negative_images_dir = "C:\\Users\\kalle.lehto\\oparicv\\HumidityNtemperature\\pictures\\Negative"
