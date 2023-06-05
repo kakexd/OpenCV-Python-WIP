@@ -13,19 +13,19 @@ e_index = 9
 pbar = tqdm(total=s_index - e_index + 1)
 
 cap = None
-
+#hello
 # Setting a path to the cascadetraining files.
 # CHANGE THE PATH BEFORE MIGRATING TO RASPBERRY PI!!!!!!!!!!!!
 
-positive_images_dir = "C:\\Users\\kalle.lehto\\oparicv\\HumidityNtemperature\\pictures\\Positive\\WIN_20230601_10_44_34_Pro.txt"
-negative_images_dir = "C:\\Users\\kalle.lehto\\oparicv\\HumidityNtemperature\\pictures\\Negative"
-cascade_file = "C:\\Users\\kalle.lehto\\oparicv\\HumidityNtemperature\\xml"
+#positive_images_dir = "C:\\Users\\kalle.lehto\\oparicv\\HumidityNtemperature\\pictures\\Positive\\WIN_20230601_10_44_34_Pro.txt"
+#negative_images_dir = "C:\\Users\\kalle.lehto\\oparicv\\HumidityNtemperature\\pictures\\Negative"
+#cascade_file = "C:\\Users\\kalle.lehto\\oparicv\\HumidityNtemperature\\xml"
 
 # Create an instance of the CascadeTrain
-trainer = CascadeTrain(positive_images_dir, negative_images_dir, cascade_file)
+#trainer = CascadeTrain(positive_images_dir, negative_images_dir, cascade_file)
 
 # Train the cascade classifier
-trainer.train()
+#trainer.train()
 
 
 # Finding any camera available to use
