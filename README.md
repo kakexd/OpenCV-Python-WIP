@@ -56,7 +56,7 @@ import rqdm proggres bar :D
 
 # Annotations files
 
-Making a set of annotation files for cascade to be trained from. C:/path/user/opencv/positive/*
+Making a set of annotation files for cascade to be trained from. C:/path/user/opencv/pictures/positive/*
 from Cascade training, needs to be correct path. So far it gives an error that the file does not exist in the directed path.
 \\ work work work
 
