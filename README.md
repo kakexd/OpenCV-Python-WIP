@@ -42,6 +42,7 @@ pip install psutil
 import psutil
 
 import time
+self made cascadeTrain model
 
 - this is under A True statement.
 
@@ -50,6 +51,14 @@ import time
     print("CPU Temperature:", temperature)
 
     time.sleep(5)  # Delay for 5 seconds before the next temperature measurement
+import cv2
+import rqdm proggres bar :D
+
+# Annotations files
+
+Making a set of annotation files for cascade to be trained from. C:\path\user\*
+from Cascade training, needs to be correct path. So far it gives an error that the file does not exist in the directed path.
+\\ work work work
 
 # Roadmap 2.0
 
