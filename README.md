@@ -8,7 +8,8 @@
 
 
 # OpenCV Project
-A project where Raspberry pi 4 model B has one DHT11 sensor measuring temperature and Humidity. In a code, there is one button what starts the code when pressed plus one LED what has red color.
+The project includes another project where Raspberry pi 4 model B has one DHT11 sensor measuring temperature and Humidity. In a code, there is one button what starts the code when pressed plus one LED what has red color.
+tem.py is for the humidity sensoring.
 
 # Image Acquisition: DONE
 Set up your Raspberry Pi with a camera module or an external camera to capture images or video frames of the lock. 
